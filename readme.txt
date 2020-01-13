@@ -4,6 +4,13 @@ PROJECT TITLE
 The online xml based converter.
 
 
+---------------
+OVERVIEW
+---------------
+This dockerized project is used to demonstrate a online convertion by reading xml file containing conversion rates 
+and extracting matching keys from it. 
+It updates the xml file on startup.
+
 -------------------
 GENERAL USAGE NOTES
 -------------------
@@ -26,8 +33,11 @@ NodeJS
 Installation and usage
 -----------------------
 
-The package.json files is already updated. To install dependencies in the application root in CMD, run npm install.
+to clone the project use: 
 
+ - git clone https://github.com/mknoori4470/projects.git
+
+The package.json files is already updated. To install dependencies in the application root in CMD, run npm install.
 
 Run node index.js file in application directory in command prompt or windows powershell 
 This aplication listens to port 3000 so it should run like this in browser: 
@@ -39,4 +49,8 @@ GIT and Docker ripositories
 ------------------------------
 
 project in git repository:
-  - 
+  - https://github.com/mknoori4470/projects.git
+
+
+docker image 
+  - mknoori4470/node-convert-app
