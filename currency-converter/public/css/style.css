@@ -1,0 +1,45 @@
+
+body {
+    background:#70b4ef;
+    
+}
+h2 {
+    padding: 90px 40% 5px 24%;
+}
+
+.currency {
+   padding: 10px;
+   position: relative;
+   top: 40px;
+   right:90px;
+}
+
+button {
+ margin-left: -80px;
+ margin-top: 20px;
+ 
+}
+
+#date {
+    margin-top: 17px;
+    margin-right: 190px;
+}
+
+#amount {
+ margin-top: 12px;
+ 
+}
+
+#errors {
+    color: red;
+    padding-left: 40px;
+}
+#amount input {
+ margin-top: 6px;
+ padding: 20px;
+
+   }
+
+#date input{
+     padding: 20px;
+ }

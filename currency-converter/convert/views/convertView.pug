@@ -1,0 +1,124 @@
+block variables
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="theme-color", content="#000000")
+    title #{title} | CONVERT
+    style
+        include ../../public/css/style.css
+  body
+    div#root
+      
+      block layout-content
+       h2 Amount and currency to be converted
+       hr
+       .main.container
+        .row        
+          .col-md-12
+
+            -if (errors)
+            
+              -for (var i = 0; i < errors.length; i++) {
+                div#errors 
+                  p #{errors[i].msg}
+            - } 
+            form(action="/convert", method="post")
+              
+                  .col-md-6
+                    .col-md-5
+                        div#amount.form-group
+                            label(for='amount') Amount:
+                            input.form-control(type='number', placeholder='Amount' name='amount')
+                    .col-md-5.col-md-offset-1
+                     div.form-group
+                        label(for='currency_from') From Currency:
+                        select(class='currency' name="src_currency")
+                            option(value="EUR") EUR
+                            option(value="USD") USD
+                            option(value="JPY") JPY
+                            option(value="BGN") BGN
+                            option(value="CZK") CZK
+                            option(value="DKK") DKK
+                            option(value="GBP") GBP
+                            option(value="HUF") HUF
+                            option(value="PLN") PLN
+                            option(value="RON") RON
+                            option(value="SEK") SEK
+                            option(value="CHF") CHF
+                            option(value="ISK") ISK
+                            option(value="NOK") NOK
+                            option(value="HRK") HRK
+                            option(value="RUB") RUB
+                            option(value="TRY") TRY
+                            option(value="AUD") AUD
+                            option(value="BRL") BRL
+                            option(value="CAD") CAD
+                            option(value="CNY") CNY
+                            option(value="HKD") HKD
+                            option(value="IDR") IDR
+                            option(value="ILS") ILS
+                            option(value="INR") INR
+                            option(value="KRW") KRW
+                            option(value="MXN") MXN
+                            option(value="MYR") MYR
+                            option(value="NZD") NZD
+                            option(value="PHP") PHP
+                            option(value="SGD") SGD
+                            option(value="THB") THB
+                            option(value="ZAR") ZAR 
+                            
+                    #date.col-md-5                  
+                      div.form-group
+                          label(for='favoriteBook') Reference Date:
+                          input.form-control(type='date', placeholder='' name='reference_date')
+                      i(class='far fa-arrow-right')
+            
+                  div.col-md-6
+                    div.form-group
+                        label(for='to_currency') To Currency:
+                        select(class='currency' name="dest_currency")
+                            option(value="EUR") EUR
+                            option(value="USD") USD
+                            option(value="JPY") JPY
+                            option(value="BGN") BGN
+                            option(value="CZK") CZK
+                            option(value="DKK") DKK
+                            option(value="GBP") GBP
+                            option(value="HUF") HUF
+                            option(value="PLN") PLN
+                            option(value="RON") RON
+                            option(value="SEK") SEK
+                            option(value="CHF") CHF
+                            option(value="ISK") ISK
+                            option(value="NOK") NOK
+                            option(value="HRK") HRK
+                            option(value="RUB") RUB
+                            option(value="TRY") TRY
+                            option(value="AUD") AUD
+                            option(value="BRL") BRL
+                            option(value="CAD") CAD
+                            option(value="CNY") CNY
+                            option(value="HKD") HKD
+                            option(value="IDR") IDR
+                            option(value="ILS") ILS
+                            option(value="INR") INR
+                            option(value="KRW") KRW
+                            option(value="MXN") MXN
+                            option(value="MYR") MYR
+                            option(value="NZD") NZD
+                            option(value="PHP") PHP
+                            option(value="SGD") SGD
+                            option(value="THB") THB
+                            option(value="ZAR") ZAR
+                  .col-md-7.col-md-offset-1
+                      button.btn.btn-primary.btn-block(type='submit') Convert
+          hr
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+    integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous')
+ 
